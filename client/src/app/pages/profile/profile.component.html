@@ -1,9 +1,12 @@
-<p>profile works!</p>
-@if (isAuthenticated) {
-<p>Logged in</p>
-} @else {
-    <img src="/assets/logged-out.png"/>
-    <h3>You're not logged in</h3>
-    <p>Log in or create an account first to view your profile.</p>
-    <button>Log In</button>
-}
+<div class="flex items-center justify-center h-screen">
+    @if (isAuthenticated) {
+        <p>Logged in</p>
+    } @else {
+        <div class="text-center">
+            <img class="mx-auto w-1/2 md:1/6 mb-6" src="/assets/logged-out.png"alt="logged out photo">
+            <h3>You're not logged in</h3>
+            <p>Log in or create an account first to view your profile.</p>
+            <button>Log In</button>
+        </div>
+    }
+</div>
