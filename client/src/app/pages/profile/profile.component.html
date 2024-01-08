@@ -1,9 +1,18 @@
-<p>profile works!</p>
 @if (isAuthenticated) {
 <p>Logged in</p>
 } @else {
-    <img src="/assets/logged-out.png"/>
-    <h3>You're not logged in</h3>
-    <p>Log in or create an account first to view your profile.</p>
-    <button>Log In</button>
+    <div class="w-full content-center">
+        <img class="mx-auto object-scale-down w-80" src="/assets/logged-out.png"/>
+        <h1 class="mx-auto text-center mb-4 text-4xl font-extrabold leading-none text-gray-900 md:text-5xl lg:text-6xl">You're not logged in!</h1>
+        <p class="mx-auto text-center mb-3 leading-none text-gray-900">Log in or create an account to view your profile.</p>
+        <div class="w-full flex flex-row justify-center">
+            <a routerLink="/login" ng-reflect-router-link="/login" href="/login">
+                <button class="mx-10 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Sign In</button>
+            </a>
+            <a routerLink="/register" ng-reflect-router-link="/register" href="/register">
+                <button class="mx-10 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Sign Up</button>
+            </a>
+        </div>
+    </div>
+    
 }
