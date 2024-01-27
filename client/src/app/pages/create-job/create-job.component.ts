@@ -72,8 +72,6 @@ export class CreateJobComponent implements OnInit {
     if (!token) {
       return this.toastr.error('You are not authorised to create a job.');
     }
-
-  
     
   const jobData = this.form.value
   console.log(jobData)
